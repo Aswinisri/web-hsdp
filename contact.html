@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HSDP Techno Private Limited| Mobile App Development| Web Development| Internship| Placement</title>
+    
+    <link rel="icon" type="images" href="./images/Logo-1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+        <header>
+          <div class="wrapper">
+            <nav>
+              <div class="logo">    <img src="images/logo for web.png" alt="" /></div>
+           
+            
+             
+              <ul>
+                <li>
+                    <a active="Home"  href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a active="Services" href="services.html">Services</a>
+                  </li>
+        
+                  <li>
+                    <a active="Courses" href="courses.html">Courses</a>
+                  </li>
+        
+                  <li>
+                    <a active="Team" href="team.html">Team</a>
+                  </li>
+                  <li>
+                    <a active="Portfolio" href="portfolio.html">Portfolio</a>
+                  </li>
+                  <li>
+                    <a active="Contact" href="contact.html" class="btn dark">Contact </a>
+                  </li>
+              </ul>
+            </div>
+            </nav>
+            
+      
+            <!-- End of desktop navigation menu -->
+      
+            <nav class="mobile-nav">
+              <div class="logo">    <img src="images/logo for web.png" alt="" /></div>
+             
+           
+            
+              <div class="menu-icon">
+                <img src="images/menu-icon.svg" alt="" />
+              </div>
+            </nav>
+      
+            <div class="mobile-menu-container">
+              <div class="close-icon">
+                <img src="images/close-icon.svg" alt="" />
+              </div>
+      
+              <ul>
+                <li>
+                    <a active="Home"  href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a active="Services" href="services.html">Services</a>
+                  </li>
+        
+                  <li>
+                    <a active="Courses" href="courses.html">Courses</a>
+                  </li>
+        
+                  <li>
+                    <a active="Team" href="team.html">Team</a>
+                  </li>
+                  <li>
+                    <a active="Portfolio" href="portfolio.html">Portfolio</a>
+                  </li>
+                  <li>
+                    <a active="Contact" href="contact.html" class="btn dark">Contact </a>
+                  </li>
+                 </ul>
+            </div>
+<br><br><br>
+    
+   
+   
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- <script type="text/javascript">
+      (function () {
+        emailjs.init("J01QMSmqj93QY8gmJ");
+      })();
+    </script> -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("BEGThgXuqIv2a0yoQ");
+})();
+</script>
+  </head>
+  <body>
+    <section id="contact" style="background:  linear-gradient(180deg, #e9e9ebca 0%, hsl(240, 13%, 94%) 100%);">
+    <div class="container border mt-3 bg-light">
+      <div class="row">
+        <div class="col-md-6 p-5" style="background-color: rgb(156, 241, 156);">
+          <h1>Hi there!</h1>
+          <h4>
+           HSDP is Ready to Help You...!<br>
+           Drop Your Queries...
+          </h4>
+        </div> 
+        <div class="col-md-6 border-left py-3" style="background-color: rgb(156, 241, 156);">
+          <h1>Contact form</h1>
+          <div class="form-group">
+            <h5 for="name">Name</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="email">Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="message">Message</h5>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="sendMail()" style="background-color:skyblue">Submit</button>
+        </div>
+      </div>
+    </div>
+    <style>
+         @media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: flex;
+  }
+
+  nav.mobile-nav.scrolled {
+    padding: 8px 100px;
+    background: var(--light-blue-color);
+    box-shadow: 0 9px 21px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-menu-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 400ms ease;
+  }
+
+  .mobile-menu-container.active {
+    left: 0;
+  }
+
+  .mobile-menu-container .close-icon {
+    position: fixed;
+    top: 32px;
+    right: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+  }
+
+  .mobile-menu-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-menu-container ul li {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  .mobile-menu-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+@media screen and(max-width: 460px){
+              .featured-item-content{
+                  -webkit-transform: translateY(68%);
+                  -ms-transform: translateY(68%);
+                      transform: translateY(68%);
+              }
+            }
+            @media screen and (min-width: 678px){
+              .test-item::after{
+                  left: 4rem;
+                  -webkit-transform: translateX(0);
+                  -ms-transform: translateX(0);
+                      transform: translateX(0);
+              
+              }
+              .test-item-info{
+                  left: 1rem;
+                  -webkit-transform: translateX(0);
+                      -ms-transform: translateX(0);
+                          transform: translateX(0);
+                  text-align: left;
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              }
+            }
+            @media screen and (min-width: 768px){
+              .header-title p{
+                  font-size: 1.4rem;
+              }
+              .featured-row, .services-row, .footer-row{
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 2rem;
+              }
+              .featured-item, .services-item{
+                  margin: 0;
+              }
+              .footer-row{
+                  text-align: left;
+              }
+              .social-links{
+                  -webkit-box-pack: start;
+                      -ms-flex-pack: start;
+                          justify-content: start;
+              }
+              .social-links li:nth-child(1){
+                  margin-left: 0;
+              }
+              .subscribe-form form{
+                  -webkit-box-align: start;
+                  -ms-flex-align: start;
+                      align-items: flex-start;
+              }
+              .gallery-row, .popular-row, .blog-row, .facts-row{
+                   display: grid;
+                   grid-template-columns: repeat(2, 1fr);
+                   gap: 2rem;
+              }
+              .gallery-item{
+                  margin: 0;
+                
+              }
+              .popular-row, .facts-row{
+                  gap: 0;
+              }
+              .facts-row{
+                  -webkit-column-gap: 5rem;
+                     -moz-column-gap: 5rem;
+                          column-gap: 5rem;
+              }
+            }
+            @media screen and (min-width: 1200px){
+              .header-title h1{
+                  font-size: 4rem;
+              }
+              .header-form form{
+                  -webkit-box-orient: horizontal;
+                  -webkit-box-direction: normal;
+                      -ms-flex-direction: row;
+                          flex-direction: row;
+                  -webkit-box-align: stretch;
+                      -ms-flex-align: stretch;
+                          align-items: stretch;
+              }
+              .header-form .form-control, .header-form .btn{
+                  margin: 0 0.5rem;
+              }
+            }
+      </style>
+    
+  </section>
+
+  </body>
+  <script>
+    function sendMail() {
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+  
+    const serviceID = "service_yypfbxl";
+    const templateID = "template_k7cfc9q";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+          alert("Your message sent successfully!!")
+  
+      })
+      .catch(err=>console.log(err));
+  
+  }
+</script>
+<footer>
+    <div class="wrapper">
+      <div class="links-container">
+        <div class="links">
+          <h3>Contact Us</h3>
+
+          <ul>
+            <li>
+              <a href="#">+917418814902<br>
+                +917418814901
+              </a>
+            </li>
+
+            <li>
+              <a href="#">info@hsdptechno.com<br>
+                hsdptechno@gmail.com</a>
+            </li>
+
+            <!-- <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li> -->
+          </ul>
+        </div>
+
+        <div class="links">
+          <h3>Address</h3>
+
+          <ul>
+            <li>
+              <a href="#">No:617, 1st floor,<br>
+                Bharath Kumar Bhawan<br>
+                Khivraj Campus<br>
+                Thousand Lights, Chennai<br>
+                Tamil Nadu 600006
+              </a>
+            </li>
+
+            <!-- <li>
+              <a href="#">Download</a>
+            </li>
+
+            <li>
+              <a href="#">All Courses</a>
+            </li> -->
+          </ul>
+        </div>
+
+        <div class="links">
+          <h3>Follow us on</h3>
+
+          <ul>
+            <!-- <li>contact@gmail.com</li> -->
+          </ul>
+
+          <div class="social">
+            <a href="#">
+              <img src="images/facebook-logo.svg" alt="" />
+            </a>
+
+            <a href="https://instagram.com/hsdp.techno?igshid=OGQ2MjdiOTE=">
+              <img src="images/instagram-logo.svg" alt="" />
+            </a>
+            <!-- <a href="#" style-=>
+              <img src="images/twitter-icon.svg" alt=""/>
+            </a> -->
+            <!-- <a href="#" style-=>
+              <img src="images/youtube-icon.svg" alt=""/>
+            </a> -->
+            <a href="https://g.co/kgs/rDrDdZ" style-=>
+              <img src="images/google-icon.svg" alt=""/>
+            </a>
+          </div><br>
+
+          <!-- <form action="#"> -->
+          
+            <button style="background:linear-gradient(180deg, #3cf066 0%, #0d6c1de7 100%);padding:8px 32px;border-radius: 8px;">
+            <a href="privacy.html" class="submit-btn" style="color:white;font-size: 1rem;">Privacy policy</a><br>   </button><br><br>
+            <button style="background:linear-gradient(180deg, #3cf066 0%, #0d6c1de7 100%);padding:8px 32px;border-radius: 8px;"><a href="terms.html" class="submit-btn" style="color:white;font-size: 1rem;">Terms of Use</a><br></button><br><br>
+            <button style="background:linear-gradient(180deg, #3cf066 0%, #0d6c1de7 100%);padding:8px 32px;border-radius: 8px;"><a href="#" class="submit-btn" value="Refund policy" style="color:#ffffff;font-size: 1rem;">Refund policy</a></button>
+       
+            <!-- <input type="text" placeholder="Email Address" /> -->
+            <!-- <button class="submit-btn">privacy</button>
+          </form> -->
+           </div>
+        </div>
+      </div>
+
+      <p class="copyright">This website is developed by hsdptechno @ 2023</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</html>
